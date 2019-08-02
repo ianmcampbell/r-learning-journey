@@ -33,7 +33,7 @@ TRUE == TRUE
 Just like arithmetic, logical expressions can be grouped by parenthesis so that the entire expression (TRUE == TRUE) == TRUE
 evaluates to TRUE.
 
-To test out this property, try evaluating (FALSE == TRUE) == FALSE .
+To test out this property, try evaluating `(FALSE == TRUE) == FALSE`.
 
 ```{r b, exercise=TRUE}
 
@@ -141,7 +141,7 @@ the OR operator come in.
 
 Let's look at how the AND operator works. There are two AND operators in R, `&` and `&&`. Both operators work similarly, if
 the right and left operands of AND are both TRUE the entire expression is TRUE, otherwise it is FALSE. For example, TRUE &
-TRUE evaluates to TRUE. Try typing FALSE & FALSE to how it is evaluated.
+TRUE evaluates to TRUE. Try typing `FALSE & FALSE` to how it is evaluated.
 
 ```{r l, exercise=TRUE}
 
@@ -151,7 +151,7 @@ FALSE & FALSE
 ```
 
 You can use the `&` operator to evaluate AND across a vector. The `&&` version of AND only evaluates the first member of a
-vector. Let's test both for practice. Type the expression TRUE & c(TRUE, FALSE, FALSE).
+vector. Let's test both for practice. Type the expression `TRUE & c(TRUE, FALSE, FALSE)`.
 
 ```{r m, exercise=TRUE}
 
@@ -163,7 +163,7 @@ TRUE & c(TRUE, FALSE, FALSE)
 What happens in this case is that the left operand `TRUE` is recycled across every element in the vector of the right
 operand. This is the equivalent statement as c(TRUE, TRUE, TRUE) & c(TRUE, FALSE, FALSE).
 
-Now we'll type the same expression except we'll use the `&&` operator. Type the expression TRUE && c(TRUE, FALSE, FALSE).
+Now we'll type the same expression except we'll use the `&&` operator. Type the expression `TRUE && c(TRUE, FALSE, FALSE)`.
 
 ```{r n, exercise=TRUE}
 
@@ -245,7 +245,7 @@ Now that you're familiar with R's logical operators you can take advantage of a 
 with logical expressions.
 
 The function isTRUE() takes one argument. If that argument evaluates to TRUE, the function will return TRUE. Otherwise, the
-function will return FALSE. Try using this function by typing: isTRUE(6 > 4)
+function will return FALSE. Try using this function by typing: `isTRUE(6 > 4)`
 
 ```{r u, exercise=TRUE}
 
@@ -265,7 +265,7 @@ question("Which of the following evaluates to TRUE?",
 ```
 
 The function identical() will return TRUE if the two R objects passed to it as arguments are identical. Try out the
-identical() function by typing: identical('twins', 'twins')
+identical() function by typing: `identical('twins', 'twins')`
 
 ```{r w, exercise=TRUE}
 
@@ -285,7 +285,7 @@ question("Which of the following evaluates to TRUE?",
 
 You should also be aware of the xor() function, which takes two arguments. The xor() function stands for exclusive OR. If one
 argument evaluates to TRUE and one argument evaluates to FALSE, then this function will return TRUE, otherwise it will return
-FALSE. Try out the xor() function by typing: xor(5 == 6, !FALSE)
+FALSE. Try out the xor() function by typing: `xor(5 == 6, !FALSE)`
 
 ```{r y, exercise=TRUE}
 
@@ -371,7 +371,7 @@ Use the `any()` function to see if any of the elements of ints are less than zer
 any(ints < 0)
 ```
 
-Use the all() function to see if all of the elements of ints are greater than zero.
+Use the `all()` function to see if all of the elements of ints are greater than zero.
 
 ```{r af, exercise=TRUE, exercise.setup = "prepare-ab"}
 
