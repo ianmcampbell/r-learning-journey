@@ -1,0 +1,47 @@
+---
+title: "CheckR Example"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(checkr)
+knitr::opts_chunk$set(echo = FALSE)
+tutorial_options(exercise.checker = checkr::check_for_learnr)
+
+```
+
+
+## Example
+
+### Exercise - Value Checking
+Use the `rep()` function, with `1:4` as an input, to generate the 12-element vector `1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4`
+
+```{r value, exercise=TRUE}
+rep(1:4, each = 3)
+```
+```{r value-check}
+check_exer_1_v0 <- function(USER_CODE) {
+  code <- for_checkr(USER_CODE)
+  desired <- rep(1:4, each = 3)
+  line_where(code, insist(all(V == desired), "Your vector is {{V}}. That is not the result asked for."))
+}
+check_exer_1_v0(USER_CODE)
+```
+
+
+### Exercise - Expression Checking
+Use the `rep()` function, with `1:4` as an input, to generate the 12-element vector `1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4`
+
+```{r expression, exercise=TRUE}
+rep(1:4, each = 3)
+```
+```{r expression-check}
+check_exer_1_v1 <- function(USER_CODE) {
+  code <- for_checkr(USER_CODE)
+  line_binding(code, rep(1:4, each = 3), passif(TRUE, "Just what I wanted!"), 
+               message = "Sorry. Not exactly what I was looking for.")
+}
+check_exer_1_v1(USER_CODE)
+```
