@@ -1,0 +1,60 @@
+snippet exprep
+	```{r prepare-${1:label}}
+	
+	```
+	```{r ${1:label}, exercise=TRUE}
+	
+	```
+	```{r ${1:label}-solution}
+	
+	```
+	```{r ${1:label}-check}
+	check_exer_${1:label}<- function(USER_CODE) {
+	   code <- for_checkr(USER_CODE)
+	   desired <- 
+	   line_where(code, insist(all(V == desired), "Try again."))
+	}
+	check_exer_${1:label}(USER_CODE)
+	```
+	
+snippet exold
+	```{r ${1:label}, exercise=TRUE, exercise.setup = "prepare-${2:previous}"}
+	
+	```
+	```{r ${1:label}-solution}
+	
+	```
+	```{r ${1:label}-check}
+	check_exer_${1:label}<- function(USER_CODE) {
+	   code <- for_checkr(USER_CODE)
+	   desired <- 
+	   line_where(code, insist(all(V == desired), "Try again."))
+	}
+	check_exer_${1:label}(USER_CODE)
+	```
+
+snippet question
+	```{r ${1:label}, echo=FALSE}
+	question("",
+		answer("", correct = TRUE),
+		answer(""),
+		answer(""),
+		answer("")
+	)
+	```
+
+snippet exnoprep
+	```{r ${1:label}, exercise=TRUE}
+	
+	```
+	```{r ${1:label}-solution}
+	
+	```
+	```{r ${1:label}-check}
+	check_exer_${1:label}<- function(USER_CODE) {
+	   code <- for_checkr(USER_CODE)
+	   desired <- 
+	   line_where(code, insist(all(V == desired), "Try again."))
+	}
+	check_exer_${1:label}(USER_CODE)
+	```
