@@ -1,7 +1,7 @@
 lesson_key	title	url
 101	Basic Building Blocks	http://www.shinyserver.tk:3838/Basic-Building-Blocks/
 102	Workspace and Files	http://www.shinyserver.tk:3838/Basic-Building-Blocks/
-103	Sequences of Numbers	http://www.shinyserver.tk:3838/Basic-Building-Blocks/
+103	Sequences of Numbers	http://www.shinyserver.tk:3838/Sequence-of-Numbers/
 104	Vectors	http://www.shinyserver.tk:3838/Basic-Building-Blocks/
 105	Missing Values	http://www.shinyserver.tk:3838/Basic-Building-Blocks/
 106	Subsetting Vectors	http://www.shinyserver.tk:3838/Basic-Building-Blocks/
