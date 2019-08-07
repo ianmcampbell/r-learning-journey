@@ -6,8 +6,10 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(checkr)
 tutorial_options(exercise.completion = FALSE)
 knitr::opts_chunk$set(echo = FALSE)
+tutorial_options(exercise.checker = checkr::check_for_learnr)
 ```
 
 # Logic
@@ -29,6 +31,14 @@ Creating logical expressions requires logical operators. You're probably familia
 ```{r a-solution}
 TRUE == TRUE
 ```
+```{r a-check}
+check_exer_a<- function(USER_CODE) {
+  code <- for_checkr(USER_CODE)
+  desired <- TRUE == TRUE
+  line_where(code, insist(all(V == desired), "Try again."))
+}
+check_exer_a(USER_CODE)
+```
 
 Just like arithmetic, logical expressions can be grouped by parenthesis so that the entire expression (TRUE == TRUE) == TRUE
 evaluates to TRUE.
@@ -40,6 +50,14 @@ To test out this property, try evaluating `(FALSE == TRUE) == FALSE`.
 ```
 ```{r b-solution}
 (FALSE == TRUE) == FALSE
+```
+```{r b-check}
+check_exer_b<- function(USER_CODE) {
+   code <- for_checkr(USER_CODE)
+   desired <- (FALSE == TRUE) == FALSE
+   line_where(code, insist(all(V == desired), "Try again."))
+}
+check_exer_b(USER_CODE)
 ```
 
 The equality operator can also be used to compare numbers. Use `==` to see if 6 is equal to 7.
@@ -313,7 +331,7 @@ For the next few questions, we're going to need to create a vector of integers c
 ```{r prepare-aa}
 set.seed(1)
 ```
-```{r aa, exercise=TRUE,exercise.setup = "prepare-aa"}
+```{r aa, exercise=TRUE}
 
 ```
 ```{r aa-solution}
